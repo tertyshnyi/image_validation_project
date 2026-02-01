@@ -1,0 +1,12 @@
+{
+  "1.jpg": { "faces": false },
+  "2.jpg": { "faces": false },
+  "3.jpg": { "faces": true },
+  "4.jpg": { "faces": false },
+  "5.jpg": { "faces": true },
+  "6.jpg": { "faces": false },
+  "7.jpg": { "faces": false },
+  "8.jpg": { "faces": false },
+  "9.jpg": { "faces": true },
+  "10.jpg": { "faces": true }
+}

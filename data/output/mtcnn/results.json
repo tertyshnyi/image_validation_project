@@ -1,0 +1,56 @@
+{
+    "1.jpg": {
+        "faces_detected": false,
+        "faces_count": 0,
+        "time_sec": 5.053
+    },
+    "10.jpg": {
+        "faces_detected": true,
+        "faces_count": 1,
+        "time_sec": 0.417
+    },
+    "2.jpg": {
+        "faces_detected": false,
+        "faces_count": 0,
+        "time_sec": 7.939
+    },
+    "3.jpg": {
+        "faces_detected": false,
+        "faces_count": 0,
+        "time_sec": 4.676
+    },
+    "4.jpg": {
+        "faces_detected": true,
+        "faces_count": 2,
+        "time_sec": 4.691
+    },
+    "5.jpg": {
+        "faces_detected": false,
+        "faces_count": 0,
+        "time_sec": 4.49
+    },
+    "6.jpg": {
+        "faces_detected": true,
+        "faces_count": 1,
+        "time_sec": 0.25
+    },
+    "7.jpg": {
+        "faces_detected": false,
+        "faces_count": 0,
+        "time_sec": 10.526
+    },
+    "8.jpg": {
+        "faces_detected": false,
+        "faces_count": 0,
+        "time_sec": 0.391
+    },
+    "9.jpg": {
+        "faces_detected": true,
+        "faces_count": 1,
+        "time_sec": 0.31
+    },
+    "_metrics": {
+        "precision": 0.5,
+        "recall": 0.5
+    }
+}

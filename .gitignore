@@ -1,0 +1,27 @@
+# Python virtual environment
+venv_cpu310/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# VSCode settings
+.vscode/
+
+# macOS files
+.DS_Store
+
+# Logs and temp files
+*.log
+*.tmp

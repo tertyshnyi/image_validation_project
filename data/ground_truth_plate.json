@@ -1,0 +1,12 @@
+{
+  "1.jpg": { "plates": true },
+  "2.jpg": { "plates": false },
+  "3.jpg": { "plates": false },
+  "4.jpg": { "plates": true },
+  "5.jpg": { "plates": false },
+  "6.jpg": { "plates": true },
+  "7.jpg": { "plates": false },
+  "8.jpg": { "plates": true },
+  "9.jpg": { "plates": true },
+  "10.jpg": { "plates": false }
+}
