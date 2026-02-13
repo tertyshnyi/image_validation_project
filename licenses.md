@@ -1,228 +1,225 @@
-# Models and Libraries Licenses
-
-# Technical & Licensing Review of Selected Computer Vision Models and Libraries  
-*Prepared from a senior research / architectural due diligence perspective*
+# Prehľad modelov a knižníc s ohľadom na licenciu
 
 ---
 
-# 1. Object Detection Models
+# 1. Modely na detekciu objektov
 
 ## YOLOv8 (Ultralytics)
 
-Developed by: Ultralytics  
+Vyvinuté: Ultralytics  
 Repository: https://github.com/ultralytics/ultralytics  
-License: GPL-3.0  
+Licencia: GPL-3.0  
 
-### Technical Overview
+### Technický prehľad
 
-YOLOv8 is a modern convolutional neural network (CNN) architecture designed for real-time object detection. It belongs to the YOLO (You Only Look Once) family and is optimized for:
+YOLOv8 je moderná konvolučná neurónová sieť (CNN) určená na detekciu objektov v reálnom čase. Patrí do rodiny YOLO (You Only Look Once) a je optimalizovaná na:
 
-- High detection speed  
-- Good accuracy-to-performance ratio  
-- Easy deployment  
-- GPU acceleration  
+- Vysokú rýchlosť detekcie  
+- Dobré pomer presnosť/výkon  
+- Jednoduché nasadenie  
+- Podporu GPU  
 
-Typical use cases:
-- License plate detection  
-- Object tracking  
-- Industrial inspection  
-- Surveillance systems  
+Typické použitia:
+- Detekcia ŠPZ  
+- Sledovanie objektov  
+- Priemyselná inšpekcia  
+- Monitorovanie a bezpečnostné systémy  
 
-### Architecture Characteristics
+### Architektonické vlastnosti
 
-- Anchor-free detection
-- Multi-scale feature extraction
-- PyTorch-based implementation
-- Export support (ONNX, TensorRT, etc.)
+- Detekcia bez kotviacich boxov (anchor-free)  
+- Extrakcia viacerých mierok (multi-scale)  
+- Implementácia v PyTorch  
+- Podpora exportu (ONNX, TensorRT, atď.)  
 
-### Licensing Considerations (Critical)
+### Licenčné úvahy (kritické)
 
-YOLOv8 is released under **GPL-3.0**.
+YOLOv8 je vydané pod **GPL-3.0**.
 
-Implications:
+Dôsledky:
 
-- If integrated into a distributed product, the entire project must comply with GPL.
-- You must release your source code if the product is distributed.
-- Not ideal for closed-source commercial software.
+- Ak sa integruje do distribuovaného produktu, celý projekt musí byť v súlade s GPL  
+- Povinnosť sprístupniť zdrojový kód pri distribúcii  
+- Nevhodné pre uzavreté komerčné softvéry  
 
-### Long-Term Stability
+### Dlhodobá stabilita
 
-- Actively maintained.
-- Technically future-proof.
-- Legally restrictive for commercial distribution.
+- Aktívne udržiavané  
+- Technicky pripravené na budúcnosť  
+- Legálne obmedzené pre komerčné projekty  
 
-### Recommendation
+### Odporúčanie
 
-Use only if:
-- Internal tooling
-- Research environment
-- Open-source project
+Použiť iba pri:
+- Interných nástrojoch  
+- Výskumných prostrediach  
+- Open-source projektoch  
 
-Avoid if:
-- Commercial distributed software
-- Proprietary IP product
+Nevhodné pri:
+- Komerčných distribuovaných softvéroch  
+- Proprietárnych produktoch
 
 ---
 
 ## RT-DETR (Hugging Face, Garon16)
 
-Model page: https://huggingface.co/Garon16/rtdetr_r50vd_russia_plate_detector  
-License: Apache-2.0  
+Model: https://huggingface.co/Garon16/rtdetr_r50vd_russia_plate_detector  
+Licencia: Apache-2.0  
 
-### Technical Overview
+### Technický prehľad
 
-RT-DETR (Real-Time Detection Transformer) is a transformer-based object detection model derived from the DETR architecture.
+RT-DETR (Real-Time Detection Transformer) je transformer-based model na detekciu objektov odvodený od architektúry DETR.
 
-Key characteristics:
+Kľúčové vlastnosti:
 
-- Transformer encoder-decoder structure
-- No anchor boxes
-- End-to-end detection
-- Modern architecture aligned with current research trends
+- Transformer encoder-decoder štruktúra  
+- Žiadne anchor boxy  
+- End-to-end detekcia  
+- Moderná architektúra v súlade s aktuálnymi trendmi  
 
-Pretrained model example:
-- Russian license plate detection
+Pretrained model príklad:
+- Detekcia ruských ŠPZ  
 
-### Licensing
+### Licencia
 
-Apache-2.0 license:
+Apache-2.0:
 
-- Commercial use allowed
-- Modification allowed
-- No copyleft requirements
-- Safe for proprietary distribution
+- Povolené komerčné použitie  
+- Povolené úpravy  
+- Bez copyleft požiadaviek  
+- Bezpečné pre proprietárne produkty  
 
-### Architectural Strength
+### Architektonické silné stránky
 
-- Transformer-based (aligned with current SOTA trends)
-- Backed by large ecosystem
-- Easy integration through Transformers API
-- Strong long-term viability
+- Transformerová architektúra (SOTA trend)  
+- Silná komunita a ekosystém  
+- Jednoduchá integrácia cez Transformers API  
+- Dlhodobá životaschopnosť  
 
-### Risk Assessment
+### Riziká
 
-- Individual pretrained model may stop receiving updates
-- Core architecture and ecosystem are stable
+- Konkrétny pretrained model môže prestať byť aktualizovaný  
+- Základná architektúra a ekosystém sú stabilné  
 
-### Recommendation
+### Odporúčanie
 
-Strong candidate for:
-- Commercial systems
-- Long-term projects
-- License-safe deployments
+Ideálne pre:
+- Komerčné systémy  
+- Dlhodobé projekty  
+- Licenčne bezpečné nasadenie
 
 ---
 
-# 2. Face Detection Models
+# 2. Modely na detekciu tvárí
 
 ## MTCNN (Multi-Task Cascaded CNN)
 
 Repository: https://github.com/ipazc/mtcnn  
-License: MIT  
+Licencia: MIT  
 
-### Technical Overview
+### Technický prehľad
 
-MTCNN is a cascaded CNN-based face detector:
+MTCNN je kaskádová CNN na detekciu tvárí:
 
-- P-Net (proposal)
-- R-Net (refinement)
-- O-Net (output + landmarks)
+- P-Net (proposal)  
+- R-Net (refinement)  
+- O-Net (output + landmarky)  
 
-Features:
-- Face detection
-- Landmark extraction
-- Lightweight inference
+Funkcie:
+- Detekcia tvárí  
+- Extrakcia landmarkov  
+- Ľahká inferencia  
 
-### Strengths
+### Silné stránky
 
-- MIT license (permissive)
-- Simple integration
-- Good for controlled environments
+- Permisívna licencia MIT  
+- Jednoduchá integrácia  
+- Dobré pre kontrolované prostredia  
 
-### Weaknesses
+### Slabé stránky
 
-- Older architecture
-- Not SOTA by modern standards
-- Slower than optimized DNN-based detectors
+- Staršia architektúra  
+- Nie SOTA podľa moderných štandardov  
+- Pomalšie ako optimalizované DNN detektory  
 
-### Recommendation
+### Odporúčanie
 
-Use when:
-- Need facial landmarks
-- Moderate accuracy acceptable
-- Simplicity preferred over cutting-edge accuracy
+Použiť keď:
+- Potrebné landmarky tváre  
+- Stredná presnosť postačuje  
+- Jednoduchosť nad SOTA presnosťou
 
 ---
 
 ## OpenCV DNN Face Detector (Caffe / ResNet SSD)
 
-License: BSD  
+Licencia: BSD  
 
-### Technical Overview
+### Technický prehľad
 
-Pretrained deep neural network detector using:
+Predtrénovaný DNN detektor tvárí používa:
 
-- ResNet SSD
-- Caffe-based model
-- Integrated via OpenCV DNN module
+- ResNet SSD  
+- Caffe model  
+- Integrácia cez OpenCV DNN modul  
 
-Characteristics:
+Vlastnosti:
 
-- No need for heavy ML framework
-- CPU-friendly
-- Production-stable
+- Nie je potrebný ťažký ML framework  
+- CPU-friendly  
+- Produkčne stabilný  
 
-### Strengths
+### Silné stránky
 
-- Extremely stable
-- Minimal dependencies
-- Industrial-grade reliability
-- Permissive BSD license
+- Extrémne stabilné  
+- Minimálne závislosti  
+- Priemyselná spoľahlivosť  
+- Permisívna BSD licencia  
 
-### Weaknesses
+### Slabé stránky
 
-- Less flexible for custom training
-- Not SOTA accuracy
+- Menej flexibilné pre vlastný tréning  
+- Nie SOTA presnosť  
 
-### Recommendation
+### Odporúčanie
 
-Best choice for:
-- Long-term enterprise systems
-- Low-dependency environments
-- Embedded deployments
+Najlepšie pre:
+- Dlhodobé enterprise systémy  
+- Prostredia s minimálnymi závislosťami  
+- Embedded nasadenia
 
 ---
 
 ## Haar Cascade Classifier
 
-License: BSD  
+Licencia: BSD  
 
-### Technical Overview
+### Technický prehľad
 
-Classic Viola–Jones detector using:
+Klasický Viola–Jones detektor používa:
 
-- Haar-like features
-- Integral images
-- Boosted cascades
+- Haar-like features  
+- Integral images  
+- Boosted cascades  
 
-Characteristics:
+Vlastnosti:
 
-- Very lightweight
-- CPU-only
-- Extremely fast
+- Veľmi ľahký  
+- CPU-only  
+- Extrémne rýchly  
 
-### Limitations
+### Limitácie
 
-- Poor performance in complex environments
-- Sensitive to lighting and angles
-- Obsolete for modern applications
+- Slabý výkon v zložitých podmienkach  
+- Citlivý na svetlo a uhly  
+- Zastaralý pre moderné aplikácie  
 
-### Recommendation
+### Odporúčanie
 
-Use only if:
-- Hardware extremely constrained
-- Accuracy requirements low
-- Legacy compatibility needed
+Použiť iba keď:
+- Hardvér je extrémne obmedzený  
+- Nízke požiadavky na presnosť  
+- Legacy kompatibilita potrebná
 
 ---
 
@@ -231,160 +228,160 @@ Use only if:
 ## EasyOCR
 
 Repository: https://github.com/JaidedAI/EasyOCR  
-License: Apache-2.0  
+Licencia: Apache-2.0  
 
-### Technical Overview
+### Technický prehľad
 
-EasyOCR provides:
+EasyOCR poskytuje:
 
-- Multilingual OCR
-- Deep learning-based recognition
-- PyTorch backend
-- Simple API
+- Multijazykové OCR  
+- Deep learning-based rozpoznávanie  
+- PyTorch backend  
+- Jednoduché API  
 
-Supported:
-- License plates
-- Documents
-- Scene text
+Podporované:
+- ŠPZ  
+- Dokumenty  
+- Text v scéne  
 
-### Strengths
+### Silné stránky
 
-- Apache-2.0 license
-- Easy integration
-- Active community
-- Commercial-friendly
+- Apache-2.0 licencia  
+- Jednoduchá integrácia  
+- Aktívna komunita  
+- Komerčne použiteľné  
 
-### Weaknesses
+### Slabé stránky
 
-- Not fastest for high-throughput enterprise scale
-- Limited fine-grained model control
+- Nie najrýchlejší pri veľkom objeme  
+- Limitovaná jemná kontrola modelu  
 
-### Recommendation
+### Odporúčanie
 
-Ideal for:
-- Small to medium-scale OCR
-- License plate recognition
-- Rapid prototyping
+Ideálne pre:
+- Malé a stredné OCR projekty  
+- Rozpoznávanie ŠPZ  
+- Rýchle prototypovanie
 
 ---
 
-# 4. Core Frameworks
+# 4. Core Frameworky
 
 ## TensorFlow
 
-Website: https://www.tensorflow.org  
-License: Apache-2.0  
+Web: https://www.tensorflow.org  
+Licencia: Apache-2.0  
 
-- Mature
-- Production-grade
-- Long-term maintained
-- Suitable for enterprise
+- Zrelé riešenie  
+- Produkčne pripravené  
+- Dlhodobo udržiavané  
+- Enterprise-friendly
 
 ---
 
 ## PyTorch
 
-Website: https://pytorch.org  
-License: BSD  
+Web: https://pytorch.org  
+Licencia: BSD  
 
-- Research-friendly
-- Flexible
-- Widely adopted
-- Commercial-safe
+- Výskumno-priateľské  
+- Flexibilné  
+- Široko používané  
+- Bezpečné pre komerčné použitie
 
 ---
 
 ## Transformers (Hugging Face)
 
-Documentation: https://huggingface.co/docs/transformers  
-License: Apache-2.0  
+Dokumentácia: https://huggingface.co/docs/transformers  
+Licencia: Apache-2.0  
 
-Provides:
-- AutoModelForObjectDetection
-- AutoImageProcessor
-- Unified model loading API
+Poskytuje:
+- AutoModelForObjectDetection  
+- AutoImageProcessor  
+- Jednotné API pre načítanie modelov  
 
-Strong ecosystem and long-term stability.
+Silná komunita a dlhodobá stabilita.
 
 ---
 
-# 5. Supporting Libraries
+# 5. Podporné knižnice
 
 ## NumPy
 
-Website: https://numpy.org  
-License: BSD  
+Web: https://numpy.org  
+Licencia: BSD  
 
-- Core numerical computing library
-- Fundamental dependency
-- Extremely stable
+- Kľúčová knižnica pre numerické výpočty  
+- Fundamentálna závislosť  
+- Extrémne stabilná
 
 ---
 
 ## scikit-learn
 
-Website: https://scikit-learn.org  
-License: BSD  
+Web: https://scikit-learn.org  
+Licencia: BSD  
 
-- Evaluation metrics
-- Precision / Recall
-- Model validation utilities
+- Vyhodnocovacie metriky  
+- Precision / Recall  
+- Nástroje pre validáciu modelov
 
 ---
 
-# Final Architectural Assessment
+# Finálne architektonické hodnotenie
 
-## Safest Long-Term Commercial Stack
+## Najbezpečnejší long-term komerčný stack
 
-Detection:
-RT-DETR (Apache-2.0)
+Detekcia:
+RT-DETR (Apache-2.0)  
 
 Framework:
-PyTorch (BSD)
+PyTorch (BSD)  
 
-Preprocessing:
-OpenCV (BSD)
+Predspracovanie:
+OpenCV (BSD)  
 
 OCR:
-EasyOCR (Apache-2.0)
+EasyOCR (Apache-2.0)  
 
-Evaluation:
+Vyhodnotenie:
 NumPy + scikit-learn (BSD)
 
 ---
 
-## Risk Summary
+## Zhrnutie rizík
 
-Low Risk:
-- PyTorch
-- OpenCV
-- NumPy
-- scikit-learn
-- TensorFlow
-- EasyOCR
+Nízkorizikové:
+- PyTorch  
+- OpenCV  
+- NumPy  
+- scikit-learn  
+- TensorFlow  
+- EasyOCR  
 - RT-DETR (Apache)
 
-Medium Risk:
-- MTCNN (aging architecture)
+Stredné riziko:
+- MTCNN (starnúca architektúra)
 
-High Legal Risk:
+Vysoké právne riziko:
 - YOLOv8 (GPL-3.0)
 
 ---
 
-# Executive Conclusion
+# Záverečné odporúčanie
 
-If building a commercial, long-term supported system:
+Pri budovaní komerčného, dlhodobo podporovaného systému:
 
-Recommended stack:
-RT-DETR + PyTorch + OpenCV + EasyOCR
+Odporúčaný stack:  
+**RT-DETR + PyTorch + OpenCV + EasyOCR**
 
-If prioritizing maximal long-term stability with minimal licensing risk:
-OpenCV DNN + EasyOCR
+Pri prioritizácii maximálnej stability a minimálneho licenčného rizika:  
+**OpenCV DNN + EasyOCR**
 
-If internal R&D only:
-YOLOv8 acceptable.
+Pre interné R&D použitie:  
+YOLOv8 je akceptovateľné.
 
 ---
 
-Prepared with architectural, licensing, and long-term maintenance considerations in mind.
+Pripravené s ohľadom na architektúru, licenciu a dlhodobú udržateľnosť.
